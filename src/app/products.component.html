@@ -1,0 +1,44 @@
+
+<h3>Products View</h3>
+
+<table border="1">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Price
+		</th>
+		<th>
+			Brand
+		</th>
+		<th>
+			Action
+		</th>
+	</tr>
+
+	<tr *ngFor="let product of products">
+		<td>
+			{{ product.name }}
+		</td>
+
+		<td>
+			{{ product.price }}
+		</td>
+
+		<td>
+			{{ product.brand }}
+		</td>
+		<td>
+			<button (click)="viewProduct(product, $index)">View</button>
+		</td>
+	</tr>
+</table>
+
+
+<products-details 
+*ngIf="selectedProduct != null" 
+[product]="selectedProduct"
+(updateEvent)="updateNewPrice($event)">
+	
+</products-details>]

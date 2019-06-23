@@ -1,0 +1,8 @@
+
+<h3>Product Details View</h3>
+<label>Name: {{ product.name }}</label><br/>
+<label>Price: {{ product.price }}</label><br/>
+
+Update Price: <input type="text" [(ngModel)]="newprice"> 
+<button (click)="updatePrice()">Update</button>
+
